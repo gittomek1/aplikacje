@@ -1,0 +1,6 @@
+kw1: SELECT id, nazwa, wystepowanie FROM ryby where ryby.styl_zycia=1;
+kw2: SELECT Ryby_id, wymiar_ochronny FROM okres_ochronny WHERE wymiar_ochronny<30;
+kw3: SELECT nazwa, akwen, wojewodztwo FROM ryby, lowisko WHERE ryby.id=ryby_id and rodzaj=3;
+kw4: ALTER TABLE ryby ADD dobowy_limit tinyint unsigned; 
+
+Link do akrusza: https://egzamin-informatyk.pl/arkusz-praktyczny-inf03-2022-06-01/
