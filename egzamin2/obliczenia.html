@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja plaliw</title>
+    <link rel = "stylesheet" href = "styl2.css">
+</head>
+
+<body>
+    <div class = "banner">
+        <h1>Całodobowa stacja paliw</h1>
+    </div>
+    <div class = "menu">
+        <a href = "stacja.html">
+            <img src = "home.png">
+        </a>
+        <a href = "obliczenia.html">
+            <img src = "znak.png">
+        </a>
+        <a href = "kwerendy.txt">Pobierz dokumenty</a>
+    </div>
+    <div class = "lewy">
+        <h2>Koszt orientacyjny paliwa</h2>
+    <form>
+        <label for = "rodzaj">
+            Rodzaj paliwa(1-benzyna, 2-olej napędowy):
+        </label><br>
+        <input type = "number" id = "rodzaj" name = "rodzaj"><br>
+
+        <label for = "ile">Ile litrów?</label>
+        <br>
+        <input type = "number" id = "ile" name = "ile"><br>
+
+        <button id = "Oblicz">Oblicz</button>
+    </form>
+    <p id = "wynik"></p>
+    </div>
+    <div class = "prawy">
+        <img src = "samochod.png" alt = "samochód">
+    </div>
+    <div class = "stopka">Stronę opracował: 0000000</div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("#oblicz").addEventListener('click', function(){
+        let rodzja = document.getElementById('rodzaj').value;
+        let ile = document.getElementById('ile').value;
+        let cena;
+        if(rodzaj == 1){
+            let cena = 4;
+        } else {
+            if (rodzaj == 2){
+                let cena = 3.5;
+            } else {
+                let cena = 0;
+            }
+        }
+        document.querySelector("#wynik").innerHTML = "Koszt paliwa: "+cena*ilosc+"zł";
+    });
+</script>
